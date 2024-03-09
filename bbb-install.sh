@@ -449,8 +449,8 @@ check_ipv6() {
 }
 
 check_cpus() {
-  if [ "$(nproc --all)" -lt 4 ]; then
-    echo "Your server needs to have (at least) 4 CPU cores (8 CPU cores recommended for production)."
+  if [ "$(nproc --all)" -lt 2 ]; then
+    echo "Your server needs to have (at least) 2 CPU cores (8 CPU cores recommended for production)."
     if [ "$SKIP_MIN_SERVER_REQUIREMENTS_CHECK" != true ]; then
       exit 1
     fi
